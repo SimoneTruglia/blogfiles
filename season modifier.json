@@ -1,0 +1,1324 @@
+{
+  "last_node_id": 67,
+  "last_link_id": 1526,
+  "nodes": [
+    {
+      "id": 26,
+      "type": "VAEDecode",
+      "pos": [
+        4174.982684235009,
+        -484.57826842281855
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 32
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 33
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            72
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 5,
+      "type": "EmptyLatentImage",
+      "pos": [
+        1285,
+        -222
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            2
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        768,
+        512,
+        1
+      ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        1710,
+        -748
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            20
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 20,
+      "type": "PreviewImage",
+      "pos": [
+        2381,
+        -263
+      ],
+      "size": [
+        897.4795837697316,
+        641.7720068328458
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 20
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 35,
+      "type": "VAEDecode",
+      "pos": [
+        4140,
+        111
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 44
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 50
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            45
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -361,
+        218
+      ],
+      "size": {
+        "0": 368.9256591796875,
+        "1": 151.88734436035156
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1,
+            21,
+            51
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            1515,
+            1517,
+            1519,
+            1521,
+            1523,
+            1525
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            8,
+            33,
+            50
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "1.5\\Realistic\\dreamshaper_8.safetensors"
+      ]
+    },
+    {
+      "id": 45,
+      "type": "PrimitiveNode",
+      "pos": [
+        3377,
+        -73
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            69,
+            70
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "steps"
+          }
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        22,
+        "fixed"
+      ]
+    },
+    {
+      "id": 40,
+      "type": "PrimitiveNode",
+      "pos": [
+        971,
+        64
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            56,
+            67,
+            68
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "steps"
+          }
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        12,
+        "fixed"
+      ]
+    },
+    {
+      "id": 65,
+      "type": "Prompt",
+      "pos": [
+        127,
+        -21
+      ],
+      "size": {
+        "0": 315,
+        "1": 146
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1515
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1517
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            1516
+          ],
+          "shape": 3
+        },
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            1518
+          ],
+          "shape": 3
+        }
+      ],
+      "title": "Prompt 0",
+      "properties": {
+        "nestedData": {
+          "nestedNodes": [
+            {
+              "id": 6,
+              "type": "CLIPTextEncode",
+              "pos": [
+                128.5,
+                -360
+              ],
+              "size": {
+                "0": 422.84503173828125,
+                "1": 164.31304931640625
+              },
+              "flags": {},
+              "order": 5,
+              "mode": 0,
+              "inputs": [
+                {
+                  "name": "clip",
+                  "type": "CLIP",
+                  "link": 1503
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "CONDITIONING",
+                  "type": "CONDITIONING",
+                  "links": [
+                    1504
+                  ],
+                  "slot_index": 0
+                }
+              ],
+              "properties": {
+                "Node name for S&R": "CLIPTextEncode"
+              },
+              "widgets_values": [
+                "a beautful garden"
+              ],
+              "color": "#232",
+              "bgcolor": "#353",
+              "serializedWidgets": [
+                {
+                  "type": "customtext",
+                  "name": "text",
+                  "value": "a beautful garden",
+                  "inputEl": {}
+                }
+              ]
+            },
+            {
+              "id": 7,
+              "type": "CLIPTextEncode",
+              "pos": [
+                125.5,
+                318
+              ],
+              "size": {
+                "0": 425.27801513671875,
+                "1": 180.6060791015625
+              },
+              "flags": {},
+              "order": 6,
+              "mode": 0,
+              "inputs": [
+                {
+                  "name": "clip",
+                  "type": "CLIP",
+                  "link": 1505
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "CONDITIONING",
+                  "type": "CONDITIONING",
+                  "links": [
+                    1506
+                  ],
+                  "slot_index": 0
+                }
+              ],
+              "properties": {
+                "Node name for S&R": "CLIPTextEncode"
+              },
+              "widgets_values": [
+                "houses"
+              ],
+              "color": "#322",
+              "bgcolor": "#533",
+              "serializedWidgets": [
+                {
+                  "type": "customtext",
+                  "name": "text",
+                  "value": "houses",
+                  "inputEl": {}
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "widgets_values": [
+        "a beautful garden",
+        "houses"
+      ]
+    },
+    {
+      "id": 66,
+      "type": "Prompt_1",
+      "pos": [
+        2598,
+        -672
+      ],
+      "size": [
+        405.4215038064649,
+        229.8789531003988
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1519
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1521
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            1520
+          ],
+          "shape": 3
+        },
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            1522
+          ],
+          "shape": 3
+        }
+      ],
+      "title": "Prompt 1",
+      "properties": {
+        "nestedData": {
+          "nestedNodes": [
+            {
+              "id": 33,
+              "type": "CLIPTextEncode",
+              "pos": [
+                2596.5,
+                -789.5
+              ],
+              "size": {
+                "0": 422.84503173828125,
+                "1": 164.31304931640625
+              },
+              "flags": {},
+              "order": 5,
+              "mode": 0,
+              "inputs": [
+                {
+                  "name": "clip",
+                  "type": "CLIP",
+                  "link": 1507
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "CONDITIONING",
+                  "type": "CONDITIONING",
+                  "links": [
+                    1508
+                  ],
+                  "slot_index": 0
+                }
+              ],
+              "properties": {
+                "Node name for S&R": "CLIPTextEncode"
+              },
+              "widgets_values": [
+                "((autumn)), all the threes have (yellow and red leaves)"
+              ],
+              "color": "#232",
+              "bgcolor": "#353",
+              "serializedWidgets": [
+                {
+                  "type": "customtext",
+                  "name": "text",
+                  "value": "((autumn)), all the threes have (yellow and red leaves)",
+                  "inputEl": {},
+                  "last_y": 26,
+                  "y": 26,
+                  "computedHeight": 134.31304931640625
+                }
+              ]
+            },
+            {
+              "id": 57,
+              "type": "CLIPTextEncode",
+              "pos": [
+                2599.5,
+                -554.5
+              ],
+              "size": {
+                "0": 422.84503173828125,
+                "1": 164.31304931640625
+              },
+              "flags": {},
+              "order": 6,
+              "mode": 0,
+              "inputs": [
+                {
+                  "name": "clip",
+                  "type": "CLIP",
+                  "link": 1509
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "CONDITIONING",
+                  "type": "CONDITIONING",
+                  "links": [
+                    1510
+                  ],
+                  "slot_index": 0
+                }
+              ],
+              "properties": {
+                "Node name for S&R": "CLIPTextEncode"
+              },
+              "widgets_values": [
+                "light green"
+              ],
+              "color": "#322",
+              "bgcolor": "#533",
+              "serializedWidgets": [
+                {
+                  "type": "customtext",
+                  "name": "text",
+                  "value": "light green",
+                  "inputEl": {},
+                  "last_y": 26,
+                  "y": 26,
+                  "computedHeight": 134.31304931640625
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "widgets_values": [
+        "((autumn)), all the threes have (yellow and red leaves)",
+        "light green"
+      ]
+    },
+    {
+      "id": 67,
+      "type": "Prompt_2",
+      "pos": [
+        2634,
+        546
+      ],
+      "size": [
+        368.5077170504592,
+        224.61957706504177
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1523
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1525
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            1524
+          ],
+          "shape": 3
+        },
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            1526
+          ],
+          "shape": 3
+        }
+      ],
+      "title": "Prompt 2",
+      "properties": {
+        "nestedData": {
+          "nestedNodes": [
+            {
+              "id": 38,
+              "type": "CLIPTextEncode",
+              "pos": [
+                2638,
+                435.5
+              ],
+              "size": {
+                "0": 422.84503173828125,
+                "1": 164.31304931640625
+              },
+              "flags": {},
+              "order": 5,
+              "mode": 0,
+              "inputs": [
+                {
+                  "name": "clip",
+                  "type": "CLIP",
+                  "link": 1511
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "CONDITIONING",
+                  "type": "CONDITIONING",
+                  "links": [
+                    1512
+                  ],
+                  "slot_index": 0
+                }
+              ],
+              "properties": {
+                "Node name for S&R": "CLIPTextEncode"
+              },
+              "widgets_values": [
+                "heavy ((winter)), grass and trees are covered by a dense layer of snow, white colors"
+              ],
+              "color": "#232",
+              "bgcolor": "#353",
+              "serializedWidgets": [
+                {
+                  "type": "customtext",
+                  "name": "text",
+                  "value": "heavy ((winter)), grass and trees are covered by a dense layer of snow, white colors",
+                  "inputEl": {},
+                  "last_y": 26,
+                  "y": 26,
+                  "computedHeight": 134.31304931640625
+                }
+              ]
+            },
+            {
+              "id": 55,
+              "type": "CLIPTextEncode",
+              "pos": [
+                2630,
+                656.5
+              ],
+              "size": {
+                "0": 422.84503173828125,
+                "1": 164.31304931640625
+              },
+              "flags": {},
+              "order": 6,
+              "mode": 0,
+              "inputs": [
+                {
+                  "name": "clip",
+                  "type": "CLIP",
+                  "link": 1513
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "CONDITIONING",
+                  "type": "CONDITIONING",
+                  "links": [
+                    1514
+                  ],
+                  "slot_index": 0
+                }
+              ],
+              "properties": {
+                "Node name for S&R": "CLIPTextEncode"
+              },
+              "widgets_values": [
+                "colors, green, red, pink"
+              ],
+              "color": "#322",
+              "bgcolor": "#533",
+              "serializedWidgets": [
+                {
+                  "type": "customtext",
+                  "name": "text",
+                  "value": "colors, green, red, pink",
+                  "inputEl": {},
+                  "last_y": 26,
+                  "y": 26,
+                  "computedHeight": 134.31304931640625
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "widgets_values": [
+        "heavy ((winter)), grass and trees are covered by a dense layer of snow, white colors",
+        "colors, green, red, pink"
+      ]
+    },
+    {
+      "id": 36,
+      "type": "PreviewImage",
+      "pos": [
+        4414,
+        78
+      ],
+      "size": {
+        "0": 680.8256225585938,
+        "1": 484.30279541015625
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 45
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 27,
+      "type": "PreviewImage",
+      "pos": [
+        4420,
+        -487
+      ],
+      "size": [
+        662.7660254561979,
+        471.22190376860704
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 72
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        1287,
+        -54
+      ],
+      "size": {
+        "0": 315,
+        "1": 262
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 1516
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 1518
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 2
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 56,
+          "widget": {
+            "name": "steps"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            7,
+            26,
+            54
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        595954060182130,
+        "randomize",
+        12,
+        8,
+        "euler",
+        "normal",
+        1
+      ]
+    },
+    {
+      "id": 21,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        3738,
+        -545
+      ],
+      "size": {
+        "0": 315,
+        "1": 334
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 21
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 1520
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 1522
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 26
+        },
+        {
+          "name": "start_at_step",
+          "type": "INT",
+          "link": 68,
+          "widget": {
+            "name": "start_at_step"
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 69,
+          "widget": {
+            "name": "steps"
+          },
+          "slot_index": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            32
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced"
+      },
+      "widgets_values": [
+        "enable",
+        928282226324996,
+        "randomize",
+        22,
+        6,
+        "euler",
+        "normal",
+        12,
+        1000,
+        "disable"
+      ]
+    },
+    {
+      "id": 34,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        3782,
+        291
+      ],
+      "size": {
+        "0": 315,
+        "1": 334
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 51
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 1524
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 1526
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 54
+        },
+        {
+          "name": "start_at_step",
+          "type": "INT",
+          "link": 67,
+          "widget": {
+            "name": "start_at_step"
+          },
+          "slot_index": 4
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 70,
+          "widget": {
+            "name": "steps"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            44
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced"
+      },
+      "widgets_values": [
+        "enable",
+        371416826845831,
+        "randomize",
+        22,
+        6,
+        "euler",
+        "normal",
+        12,
+        882,
+        "disable"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      4,
+      0,
+      3,
+      0,
+      "MODEL"
+    ],
+    [
+      2,
+      5,
+      0,
+      3,
+      3,
+      "LATENT"
+    ],
+    [
+      7,
+      3,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      8,
+      4,
+      2,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      20,
+      8,
+      0,
+      20,
+      0,
+      "IMAGE"
+    ],
+    [
+      21,
+      4,
+      0,
+      21,
+      0,
+      "MODEL"
+    ],
+    [
+      26,
+      3,
+      0,
+      21,
+      3,
+      "LATENT"
+    ],
+    [
+      32,
+      21,
+      0,
+      26,
+      0,
+      "LATENT"
+    ],
+    [
+      33,
+      4,
+      2,
+      26,
+      1,
+      "VAE"
+    ],
+    [
+      44,
+      34,
+      0,
+      35,
+      0,
+      "LATENT"
+    ],
+    [
+      45,
+      35,
+      0,
+      36,
+      0,
+      "IMAGE"
+    ],
+    [
+      50,
+      4,
+      2,
+      35,
+      1,
+      "VAE"
+    ],
+    [
+      51,
+      4,
+      0,
+      34,
+      0,
+      "MODEL"
+    ],
+    [
+      54,
+      3,
+      0,
+      34,
+      3,
+      "LATENT"
+    ],
+    [
+      56,
+      40,
+      0,
+      3,
+      4,
+      "INT"
+    ],
+    [
+      67,
+      40,
+      0,
+      34,
+      4,
+      "INT"
+    ],
+    [
+      68,
+      40,
+      0,
+      21,
+      4,
+      "INT"
+    ],
+    [
+      69,
+      45,
+      0,
+      21,
+      5,
+      "INT"
+    ],
+    [
+      70,
+      45,
+      0,
+      34,
+      5,
+      "INT"
+    ],
+    [
+      72,
+      26,
+      0,
+      27,
+      0,
+      "IMAGE"
+    ],
+    [
+      1515,
+      4,
+      1,
+      65,
+      0,
+      "CLIP"
+    ],
+    [
+      1516,
+      65,
+      0,
+      3,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1517,
+      4,
+      1,
+      65,
+      1,
+      "CLIP"
+    ],
+    [
+      1518,
+      65,
+      1,
+      3,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1519,
+      4,
+      1,
+      66,
+      0,
+      "CLIP"
+    ],
+    [
+      1520,
+      66,
+      0,
+      21,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1521,
+      4,
+      1,
+      66,
+      1,
+      "CLIP"
+    ],
+    [
+      1522,
+      66,
+      1,
+      21,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1523,
+      4,
+      1,
+      67,
+      0,
+      "CLIP"
+    ],
+    [
+      1524,
+      67,
+      0,
+      34,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1525,
+      4,
+      1,
+      67,
+      1,
+      "CLIP"
+    ],
+    [
+      1526,
+      67,
+      1,
+      34,
+      2,
+      "CONDITIONING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
